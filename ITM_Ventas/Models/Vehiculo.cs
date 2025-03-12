@@ -9,6 +9,7 @@
 
 namespace ITM_Ventas.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -27,9 +28,15 @@ namespace ITM_Ventas.Models
         public int NumeroPuertas { get; set; }
         public string TipoCombustible { get; set; }
         public string Accesorios { get; set; }
-    
+
+
+        [JsonIgnore]
         public virtual Agencia Agencia { get; set; }
+
+        [JsonIgnore]
         public virtual Marca Marca { get; set; }
+
+        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Venta> Ventas { get; set; }
     }

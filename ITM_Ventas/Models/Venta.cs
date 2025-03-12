@@ -9,6 +9,7 @@
 
 namespace ITM_Ventas.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -20,9 +21,15 @@ namespace ITM_Ventas.Models
         public int IdAgencia { get; set; }
         public Nullable<System.DateTime> FechaVenta { get; set; }
         public decimal Precio { get; set; }
-    
+
+
+        [JsonIgnore]
         public virtual Agencia Agencia { get; set; }
+
+        [JsonIgnore]
         public virtual Cliente Cliente { get; set; }
+
+        [JsonIgnore]
         public virtual Vehiculo Vehiculo { get; set; }
     }
 }
