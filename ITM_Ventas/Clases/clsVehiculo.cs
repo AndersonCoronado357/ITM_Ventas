@@ -64,6 +64,16 @@ namespace ITM_Ventas.Clases
 
         }
 
+        public Vehiculo ConsultarXMarca(int IdMarca)
+
+        {
+
+            Vehiculo veh = ITM_Ventas.Vehiculoes.FirstOrDefault(e => e.IdMarca == IdMarca);
+
+            return veh;
+
+        }
+
         public String Actualizar()
 
         {

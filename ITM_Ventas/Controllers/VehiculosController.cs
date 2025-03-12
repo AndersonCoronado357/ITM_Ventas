@@ -29,6 +29,14 @@ namespace ITM_Ventas.Controllers
             return Vehiculo.Consultar(IdVehiculo);
         }
 
+        [HttpGet]
+        [Route("ConsultarXMarca")]
+        public Vehiculo ConsultarXMarca(int IdMarca)
+        {
+            clsVehiculo Vehiculo = new clsVehiculo();
+            return Vehiculo.Consultar(IdMarca);
+        }
+
         [HttpPost]
         [Route("Insertar")]
         public string Insertar([FromBody] Vehiculo vehiculo)
